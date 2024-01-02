@@ -1,0 +1,38 @@
+@import './styles/common/variables';
+
+*,
+main {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: $fontFamily, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #191919;
+}
+
+li {
+  list-style-type: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 6px;
+  transition:
+    opacity 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  border-radius: 15px;
+  opacity: 0.7;
+  z-index: 1;
+}

@@ -1,0 +1,39 @@
+@import 'variables';
+
+@mixin textForProject($fontSize, $fontWeight, $lineHeight, $fontFamily) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  font-family: $fontFamily;
+  color: $fontFamily;
+}
+
+@mixin flexWrapper($justifyContent, $alignItems) {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin photoForMain($backgroundImage: null, $backgroundSize, $backgroundPosition) {
+  background-image: $backgroundImage;
+  background-size: $backgroundSize;
+  background-position: $backgroundPosition;
+}
+
+@mixin formControl {
+  padding: 8px 20px 8px 16px;
+  //border: 1px solid #e8e8e8;
+  border: 1px solid var(--color-contrast-low);
+  border-radius: 6px;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease;
+  background-color: var(--background-color);
+
+  input {
+    font-family: $fontFamily;
+    font-size: 16px;
+    padding: 8px 16px 8px 16px;
+    width: 100%;
+    background-color: var(--background-color);
+  }
+}
