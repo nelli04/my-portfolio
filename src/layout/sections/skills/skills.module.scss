@@ -1,0 +1,29 @@
+@import '@/styles/common/variables';
+@import '@/styles/common/mixins';
+
+.mainContainer {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  padding: 100px 0;
+
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+  .title {
+    font-size: 30px;
+    font-family: $fontFamily, 'sans-serif';
+  }
+
+  .skills {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+
+    @media screen and (max-width: 640px) {
+      justify-content: center;
+    }
+  }
+}
