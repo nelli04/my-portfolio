@@ -1,0 +1,49 @@
+@import '../../styles/common/variables';
+
+.container {
+  padding: 80px 0;
+  background: var(--color-contrast-lowing);
+
+  .text {
+    font-size: 64px;
+  }
+
+  .accentText {
+    font-weight: 700;
+    font-size: 64px;
+  }
+
+  .linkWrapper {
+    display: flex;
+    border: 1px solid var(--color-contrast-higher);
+    justify-content: center;
+    border-radius: 45px;
+    padding: 10px;
+    font-size: 25px;
+    transition: all 0.3s $cubicBezier;
+
+    .link {
+      color: var(--color-contrast-higher);
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      animation: 0.6s $cubicBezier;
+
+      a {
+        transition: all 0.3s $cubicBezier;
+        transform: scale(1.1);
+        animation: 0.1s $cubicBezier;
+        color: $primaryColor;
+      }
+    }
+  }
+}
