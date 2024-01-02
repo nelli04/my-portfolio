@@ -1,0 +1,79 @@
+@import '@/styles/common/variables';
+@import '@/styles/common/mixins';
+
+.mainContainer {
+  display: flex;
+  min-height: 100vh;
+
+  .greetings {
+    max-width: 620px;
+    margin-bottom: 20px;
+    font-family: $fontFamily, sans-serif;
+
+    .smallText {
+      font-size: 24px;
+      font-weight: 700;
+      display: block;
+      margin: 10px 0;
+
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        transition: 0.5s;
+        margin-top: 100px;
+      }
+    }
+
+    .name {
+      color: $primaryColor;
+      font-size: 36px;
+      font-weight: 700;
+      @media screen and (max-width: 767px) {
+        font-size: 22px;
+        transition: 0.5s;
+      }
+    }
+
+    .mainTitle {
+      font-size: 96px;
+      font-weight: 700;
+
+      @media screen and (max-width: 767px) {
+        font-size: 54px;
+        transition: 0.5s;
+      }
+      @media screen and (max-width: 467px) {
+        font-size: 34px;
+        transition: 0.5s;
+      }
+
+      .typewriter {
+        margin: 5px 0 0 55px;
+      }
+    }
+  }
+
+  .photo {
+    position: relative;
+    z-index: 1;
+    width: 650px;
+    height: 650px;
+    overflow: hidden;
+    @include photoForMain(null, cover, center);
+
+    .blob {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    @media (max-width: 1270px) {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
