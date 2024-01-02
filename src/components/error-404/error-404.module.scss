@@ -1,0 +1,53 @@
+@import '../../styles/common/variables';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: $primaryColor;
+  font-family: $fontFamily, sans-serif;
+
+  .textWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0 0 350px;
+    font-weight: 700;
+    color: white;
+
+    h2 {
+      font-size: 90px;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      background-color: #efefef;
+      border-radius: 25px;
+      padding: 10px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      width: 150px;
+      text-align: center;
+
+      a {
+        color: #363636;
+      }
+    }
+  }
+
+  img {
+    width: 500px;
+    height: 100%;
+    overflow: hidden;
+  }
+}
