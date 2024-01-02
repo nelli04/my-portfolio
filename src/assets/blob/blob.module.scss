@@ -1,0 +1,24 @@
+.container {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .svg {
+    opacity: 1;
+    filter: blur(1px);
+    transform: rotate(129deg);
+
+    path {
+      fill: url(#gradient);
+    }
+
+    .stopTwo {
+      stop-color: rgb(239, 93, 57);
+    }
+
+    @media (max-width: 1270px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+}
