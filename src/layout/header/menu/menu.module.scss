@@ -1,0 +1,85 @@
+@import '@/styles/common/variables';
+@import '@/styles/common/mixins';
+
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+
+  transition: color 250ms $cubicBezierInNav;
+  overflow: hidden;
+
+  font-family: $fontFamily, sans-serif;
+  font-size: 20px;
+
+  span {
+    transform-origin: left bottom;
+    will-change: transform;
+    transition:
+      transform 0.5s $cubicBezierInNav 0s,
+      -webkit-transform 0.5s $cubicBezierInNav 0s;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li > a {
+      display: flex;
+
+      &::after {
+        content: attr(title);
+        position: absolute;
+
+        padding: 4px 0;
+        top: 0;
+        will-change: transform;
+        transform: translate(0%, 100%) skewY(20deg);
+        transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+
+        color: $primaryColor;
+      }
+    }
+  }
+
+  a {
+    color: var(--color-contrast-higher);
+    padding: 8px 10px;
+    margin: 10px 10px;
+  }
+
+  .nav .navList .listItem:hover a {
+    cursor: pointer;
+
+    &::after {
+      transform: translateZ(0);
+    }
+
+    span {
+      transform: translateY(-105%) skewY(-20deg);
+    }
+  }
+
+  .nav .navList > .listItem > a {
+    display: flex;
+
+    &::after {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+
+      will-change: transform;
+      transform: translateY(130%) translateX(0%) skewY(20deg);
+      transition:
+        transform 0.5s $cubicBezierInNav 0s,
+        -webkit-transform 0.5s $cubicBezierInNav 0s;
+
+      color: $primaryColor;
+    }
+  }
+
+  .nav .navList > li.listItem > a {
+    align-items: center;
+    height: 10px;
+  }
+}
