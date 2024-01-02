@@ -1,0 +1,31 @@
+@import '@/styles/common/variables';
+
+.container {
+  background: var(--color-contrast-lowing);
+  min-height: 100vh;
+  font-family: $fontFamily, sans-serif;
+  padding: 80px 0 10px 0;
+  border-radius: 20px;
+
+  .slogan {
+    display: flex;
+    justify-content: center;
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-weight: 700;
+
+    color: #959595;
+    font-size: 14px;
+  }
+
+  .socialContactWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
